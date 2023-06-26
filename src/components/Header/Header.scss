@@ -1,0 +1,90 @@
+@use "../../styles/typography" as *;
+
+.main-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 25px 255px;
+	font-family: "Urbanist Medium";
+	font-size: 16px;
+
+	&-right {
+		display: flex;
+		align-items: center;
+
+		&__navigation {
+			ul {
+				display: flex;
+				align-items: center;
+				list-style: none;
+				padding: 0 15px;
+
+				li {
+					padding: 15px;
+
+					a {
+						color: #2d2e33;
+						font-size: 16px;
+						font-family: "Urbanist Medium";
+						text-decoration: none;
+					}
+				}
+			}
+		}
+
+		&__login {
+			position: relative;
+			display: flex;
+			align-items: center;
+			padding: 5px;
+			margin: 0 30px;
+			border-radius: 50px;
+			background-color: #fcf9f7;
+
+			p {
+				padding: 10px 19px 10px 20px;
+				font-size: 16px;
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: -30px;
+				display: block;
+				width: 1px;
+				height: 50px;
+				background-color: #cbccce;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				right: -30px;
+				display: block;
+				width: 1px;
+				height: 50px;
+				background-color: #cbccce;
+			}
+		}
+
+		&__translate {
+			position: relative;
+			padding: 0 30px;
+			cursor: pointer;
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: 45%;
+				right: 8px;
+				display: block;
+				background: url("../../assets/icons/dropdown.svg") center center
+					no-repeat;
+				width: 8px;
+				height: 5px;
+			}
+		}
+	}
+}
