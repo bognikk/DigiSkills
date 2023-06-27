@@ -1,6 +1,6 @@
-import logo from "../../assets/logos/logo-dark.png";
 import Button from "../UIElements/Button";
 
+import logo from "../../assets/logos/logo-dark.png";
 import "./Header.scss";
 
 const Header = () => {
