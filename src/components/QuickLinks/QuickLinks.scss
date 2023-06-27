@@ -1,0 +1,307 @@
+.quick-links {
+	padding: 80px 255px 40px;
+
+	&__title {
+		position: relative;
+		padding-left: 40px;
+		margin-bottom: 40px;
+		font-family: "Urbanist Bold";
+		color: #2d2e33;
+		font-size: 30px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			bottom: 0;
+			left: -2px;
+			width: 29px;
+			height: 14px;
+			margin: 0 auto;
+			background: url("../../assets/icons/link-icon.svg") center center
+				no-repeat;
+			background-size: 29px 14px;
+			transform: translate(0%, -50%);
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		list-style: none;
+
+		li {
+			width: auto;
+			margin-bottom: 55px;
+			flex: 1 1 25%;
+
+			a {
+				display: flex;
+				align-items: center;
+				text-decoration: none;
+
+				&.ql-01 {
+					.icon {
+						background: url(../../assets/icons/quick-links/find-white.svg)
+							center center no-repeat;
+						background-size: 43px;
+						background-color: #0c7ee9;
+						border: 2px solid #0c7ee9;
+						transition: 1s;
+					}
+
+					h4 {
+						color: #0c7ee9;
+					}
+
+					&:hover {
+						.icon {
+							background: url(../../assets/icons/quick-links/find-blue.svg)
+								center center no-repeat;
+							background-size: 43px;
+							background-color: #fff;
+						}
+						h4::after {
+							opacity: 1;
+							background-position: center right;
+						}
+					}
+				}
+
+				&.ql-02 {
+					.icon {
+						background: url(../../assets/icons/quick-links/monitor-white.svg)
+							center center no-repeat;
+						background-size: 43px;
+						background-color: #ebaa3f;
+						border: 2px solid #ebaa3f;
+						transition: 1s;
+					}
+
+					h4 {
+						color: #ebaa3f;
+					}
+
+					&:hover {
+						.icon {
+							background: url(../../assets/icons/quick-links/monitor-orange.svg)
+								center center no-repeat;
+							background-size: 43px;
+							background-color: #fff;
+						}
+						h4::after {
+							opacity: 1;
+							background-position: center right;
+						}
+					}
+				}
+
+				&.ql-03 {
+					.icon {
+						background: url(../../assets/icons/quick-links/laptop-white.svg)
+							center center no-repeat;
+						background-size: 43px;
+						background-color: #050835;
+						border: 2px solid #050835;
+						transition: 1s;
+					}
+
+					h4 {
+						color: #050835;
+					}
+
+					&:hover {
+						.icon {
+							background: url(../../assets/icons/quick-links/laptop-dark.svg)
+								center center no-repeat;
+							background-size: 43px;
+							background-color: #fff;
+						}
+						h4::after {
+							opacity: 1;
+							background-position: center right;
+						}
+					}
+				}
+
+				&.ql-04 {
+					.icon {
+						background: url(../../assets/icons/quick-links/find-white.svg)
+							center center no-repeat;
+						border: 2px solid #56bdfd;
+						background-color: #56bdfd;
+						background-size: 43px;
+						transition: 1s;
+					}
+
+					h4 {
+						color: #56bdfd;
+					}
+
+					&:hover {
+						.icon {
+							background: url(../../assets/icons/quick-links/find-lightblue.svg)
+								center center no-repeat;
+							background-size: 43px;
+							background-color: #fff;
+						}
+						h4::after {
+							opacity: 1;
+							background-position: center right;
+						}
+					}
+				}
+
+				&.ql-05 {
+					.icon {
+						background: url(../../assets/icons/quick-links/tedy-white.svg)
+							center center no-repeat;
+						background-size: 43px;
+						background-color: #f68523;
+						border: 2px solid #f68523;
+						transition: 1s;
+						background-position: center center;
+					}
+
+					h4 {
+						color: #f68523;
+					}
+
+					&:hover {
+						.icon {
+							background: url(../../assets/icons/quick-links/tedy-orange.svg)
+								center center no-repeat;
+							background-size: 43px;
+							background-color: #fff;
+						}
+						h4::after {
+							opacity: 1;
+							background-position: center right;
+						}
+					}
+				}
+
+				&.ql-06 {
+					.icon {
+						background: url(../../assets/icons/quick-links/light-white.svg)
+							center center no-repeat;
+						background-size: 43px;
+						background-color: #cd61ed;
+						border: 2px solid #cd61ed;
+						transition: 1s;
+					}
+
+					h4 {
+						color: #cd61ed;
+					}
+
+					&:hover {
+						.icon {
+							background: url(../../assets/icons/quick-links/light-pink.svg)
+								center center no-repeat;
+							background-size: 43px;
+							background-color: #fff;
+						}
+						h4::after {
+							opacity: 1;
+							background-position: center right;
+						}
+					}
+				}
+
+				&.ql-07 {
+					.icon {
+						background: url(../../assets/icons/quick-links/new-white.svg) center
+							center no-repeat;
+						background-size: 43px;
+						background-color: #3100fd;
+						border: 2px solid #3100fd;
+						transition: 1s;
+					}
+
+					h4 {
+						color: #3100fd;
+					}
+
+					&:hover {
+						.icon {
+							background: url(../../assets/icons/quick-links/new-blue.svg)
+								center center no-repeat;
+							background-size: 43px;
+							background-color: #fff;
+						}
+						h4::after {
+							opacity: 1;
+							background-position: center right;
+						}
+					}
+				}
+
+				&.ql-08 {
+					.icon {
+						background: url(../../assets/icons/quick-links/light-white.svg)
+							center center no-repeat;
+						background-size: 43px;
+						background-color: #873efd;
+						border: 2px solid #873efd;
+						transition: 1s;
+					}
+
+					h4 {
+						color: #873efd;
+					}
+
+					&:hover {
+						.icon {
+							background: url(../../assets/icons/quick-links/light-purple.svg)
+								center center no-repeat;
+							background-size: 43px;
+							background-color: #fff;
+						}
+						h4::after {
+							opacity: 1;
+							background-position: center right;
+						}
+					}
+				}
+
+				.icon {
+					width: 78px;
+					height: 78px;
+					margin-right: 20px;
+					border-radius: 50%;
+				}
+
+				.text {
+					h4 {
+						position: relative;
+						margin-bottom: 5px;
+						font-size: 20px;
+						font-family: "Urbanist Bold";
+
+						&::after {
+							content: "";
+							display: inline-block;
+							width: 18px;
+							height: 8px;
+							// margin-left: 10px;
+							background: url("../../assets/icons/arrow-right.svg") center left
+								no-repeat;
+							background-size: 8px;
+							transform: translate(0%, -40%);
+							opacity: 0;
+							transition: 1s;
+						}
+					}
+
+					p {
+						color: #8b8b8e;
+						font-size: 16px;
+						font-family: "Urbanist Regular";
+					}
+				}
+			}
+		}
+	}
+}
