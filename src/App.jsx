@@ -1,6 +1,7 @@
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import QuickLinks from "./components/QuickLinks/QuickLinks";
+import TopPicks from "./components/TopPicks/TopPicks";
 
 const App = () => {
 	return (
@@ -8,6 +9,7 @@ const App = () => {
 			<Header />
 			<Hero />
 			<QuickLinks />
+			<TopPicks />
 		</>
 	);
 };
