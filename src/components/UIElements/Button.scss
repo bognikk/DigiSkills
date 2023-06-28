@@ -4,7 +4,7 @@
 
 .button {
 	display: inline-block;
-	padding: 8px 30px 9px;
+	padding: 16px 30px;
 	border: 2px solid #050835;
 	border-radius: 50px;
 	color: #fff;
@@ -27,44 +27,15 @@
 	}
 
 	&--inverse {
-		color: #050835;
+		color: #fff;
 		border: 2px solid#fff;
-		background: #fff;
+		background: transparent;
 
 		&:hover,
 		&:active {
 			color: #050835;
-			border-color: red;
-			background: red;
+			border-color: #fff;
+			background: #fff;
 		}
-	}
-
-	&--danger {
-		border-color: red;
-		background: red;
-
-		&:hover,
-		&:active {
-			border-color: #f34343;
-			background: #f34343;
-		}
-	}
-
-	&--small {
-		font-size: 0.8rem;
-	}
-
-	&--big {
-		font-size: 1.5rem;
-	}
-
-	&:disabled,
-	&:hover:disabled,
-	&:active:disabled {
-		color: #979797;
-		border-color: #ccc;
-		outline: none;
-		background: #ccc;
-		cursor: not-allowed;
 	}
 }
