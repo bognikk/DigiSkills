@@ -36,7 +36,7 @@ const Header = () => {
 					<p>Become a digital partner</p>
 				</div>
 				<div className="main-header-right__translate">
-					<p>EN</p>
+					<p tabIndex="0">EN</p>
 				</div>
 			</div>
 		</header>

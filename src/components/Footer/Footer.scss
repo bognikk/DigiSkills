@@ -1,0 +1,148 @@
+.footer {
+	padding: 49px 225px 0;
+	color: #fff;
+	background-color: #050835;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+
+		.column {
+			padding: 20px 30px;
+
+			ul {
+				list-style: none;
+
+				li {
+					margin-bottom: 20px;
+					a {
+						color: #fff;
+						font-size: 16px;
+						font-family: "Urbanist SemiBold";
+						text-decoration: none;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+
+			&.contact {
+				position: relative;
+				transition: 0.5s;
+
+				&:hover,
+				&:focus {
+					background-color: #33365c;
+					border-radius: 15px;
+
+					button {
+						opacity: 1;
+					}
+				}
+
+				h2 {
+					margin-bottom: 20px;
+					color: #fff;
+					font-size: 40px;
+					font-family: "Urbanist Bold";
+				}
+
+				p {
+					margin-bottom: 20px;
+					color: #fff;
+					font-size: 16px;
+					font-family: "Urbanist SemiBold";
+				}
+
+				a {
+					position: relative;
+					padding-left: 32px;
+					margin-bottom: 20px;
+					color: #fff;
+					font-size: 16px;
+					font-family: "Urbanist SemiBold";
+					text-decoration-line: underline;
+
+					&::after {
+						content: "";
+						position: absolute;
+						left: 0;
+						width: 16px;
+						height: 16px;
+						margin: 0 auto;
+						background-size: 16px;
+					}
+
+					&:first-of-type {
+						text-decoration: underline;
+
+						&:hover,
+						&:focus {
+							text-decoration: none;
+						}
+
+						&::after {
+							background: url("../../assets/icons/mail-icon.svg") center center
+								no-repeat;
+						}
+					}
+
+					&:last-of-type {
+						text-decoration: none;
+
+						&:hover,
+						&:focus {
+							text-decoration: underline;
+						}
+
+						&::after {
+							background: url("../../assets/icons/phone-icon.svg") center center
+								no-repeat;
+						}
+					}
+				}
+
+				button {
+					margin-top: 20px;
+					font-family: "Urbanist SemiBold";
+					opacity: 0;
+					transition: 0.5s;
+
+					&:hover,
+					&:focus {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		padding: 15px 0 11px;
+		margin-top: 48px;
+		border-top: 2px solid #fff;
+		font-family: "Urbanist Medium";
+		font-size: 14px;
+
+		ul {
+			display: flex;
+			list-style: none;
+
+			li {
+				margin-left: 30px;
+				a {
+					color: #fff;
+					text-decoration: none;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}

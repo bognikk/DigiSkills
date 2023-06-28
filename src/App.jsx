@@ -5,6 +5,7 @@ import QuickLinks from "./components/QuickLinks/QuickLinks";
 import TopPicks from "./components/TopPicks/TopPicks";
 import TakeTheTest from "./components/TakeTheTest/TakeTheTest";
 import GetInTouch from "./components/GetInTouch/GetInTouch";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
 	return (
@@ -16,6 +17,7 @@ const App = () => {
 			<LearnMore />
 			<TakeTheTest />
 			<GetInTouch />
+			<Footer />
 		</>
 	);
 };

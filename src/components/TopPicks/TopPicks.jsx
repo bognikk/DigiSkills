@@ -14,7 +14,7 @@ const TopPicks = () => {
 			<h2 className="top-picks__title">Top picks</h2>
 			<ul className="top-picks__content">
 				<li>
-					<a href="#top" className="top-pick-01">
+					<a tabIndex="0" href="#top" className="top-pick-01">
 						<div className="image">
 							<img src={topPicks1} alt="lady with VR" />
 						</div>
@@ -28,12 +28,14 @@ const TopPicks = () => {
 								“Because of this 2-day training, I feel more secure in my role &
 								my future at work.”
 							</p>
-							<a href="#top">View more</a>
+							<a tabIndex="1" href="#top">
+								View more
+							</a>
 						</div>
 					</a>
 				</li>
 				<li>
-					<a href="#top" className="top-pick-02">
+					<a tabIndex="0" href="#top" className="top-pick-02">
 						<div className="image">
 							<img src={topPicks2} alt="a girl under the red light" />
 						</div>
@@ -47,12 +49,14 @@ const TopPicks = () => {
 								“Because of this 2-day training, I feel more secure in my role &
 								my future at work.”
 							</p>
-							<a href="#top">View more</a>
+							<a tabIndex="1" href="#top">
+								View more
+							</a>
 						</div>
 					</a>
 				</li>
 				<li>
-					<a href="#top" className="top-pick-03">
+					<a tabIndex="0" href="#top" className="top-pick-03">
 						<div className="image">
 							<img src={topPicks3} alt="taking notes" />
 						</div>
@@ -66,12 +70,14 @@ const TopPicks = () => {
 								“Because of this 2-day training, I feel more secure in my role &
 								my future at work.”
 							</p>
-							<a href="#top">View more</a>
+							<a tabIndex="1" href="#top">
+								View more
+							</a>
 						</div>
 					</a>
 				</li>
 				<li>
-					<a href="#top" className="top-pick-04">
+					<a tabIndex="0" href="#top" className="top-pick-04">
 						<div className="image">
 							<img src={topPicks4} alt="a girl with the laptop" />
 						</div>
@@ -89,7 +95,9 @@ const TopPicks = () => {
 								“Because of this 2-day training, I feel more secure in my role &
 								my future at work.”
 							</p>
-							<a href="#top">View more</a>
+							<a tabIndex="1" href="#top">
+								View more
+							</a>
 						</div>
 					</a>
 				</li>
