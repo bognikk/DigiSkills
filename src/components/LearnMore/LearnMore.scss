@@ -1,0 +1,66 @@
+.learn-more {
+	padding: 80px 255px 40px;
+
+	&__wrapper {
+		position: relative;
+		padding: 113px 121px 111px;
+		border-radius: 15px;
+		background: url(../../assets/images/learn-more-overlay.png) center center
+				no-repeat,
+			url(../../assets/images/learn-more-bg.png) center center no-repeat;
+		background-size: cover;
+	}
+
+	&__content {
+		width: 55%;
+
+		h2 {
+			position: relative;
+			padding-left: 54px;
+			margin-bottom: 30px;
+			color: #fff;
+			font-size: 40px;
+			font-family: "Urbanist Bold";
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 34px;
+				height: 32px;
+				background: url("../../assets/icons/megaphone-icon.svg") center center
+					no-repeat;
+				background-size: 34px 32px;
+				transform: translate(0%, -50%);
+			}
+		}
+
+		p {
+			padding-right: 73px;
+			margin-bottom: 30px;
+			color: #fff;
+			font-size: 16px;
+			font-family: "Urbanist Regular";
+			line-height: 24px;
+		}
+
+		button {
+			color: #fff;
+			font-size: 16px;
+			font-family: "Urbanist SemiBold";
+		}
+	}
+
+	.badge {
+		position: absolute;
+		top: 20px;
+		right: 19px;
+		padding: 7px 9px 6px 10px;
+		color: #cbccce;
+		border-radius: 5px;
+		font-size: 14px;
+		font-family: "Urbanist Regular";
+		background: #fff;
+	}
+}
