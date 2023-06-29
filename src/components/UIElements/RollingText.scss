@@ -1,0 +1,77 @@
+* {
+	box-sizing: border-box;
+}
+h1 {
+	font-weight: normal;
+}
+
+// .card {
+// 	// position: absolute;
+// 	display: inline-block;
+// 	border-radius: 1.5em;
+// 	// min-width: 400px;
+// 	// max-width: 1170px;
+// 	// width: 30%;
+// 	width: auto;
+// 	// padding: 2.6em 3.8em;
+// 	cursor: pointer;
+// 	// top: 50%;
+// 	// transform: translate(-50%, -50%);
+// 	// left: 40%;
+// }
+
+/* Scroller styling */
+.scroller {
+	display: flex;
+	height: 1.2em;
+	line-height: 1.2em;
+	position: relative;
+	overflow: hidden;
+	width: 4em;
+	margin-left: 20px;
+
+	& > span {
+		position: absolute;
+		top: 0;
+		font-size: 72px;
+		animation: slide 5s infinite;
+		font-weight: bold;
+
+		span {
+			background: -webkit-linear-gradient(
+				left,
+				rgba(5, 8, 53, 1),
+				rgba(248, 8, 51, 1)
+			);
+			background: -o-linear-gradient(
+				right,
+				rgba(5, 8, 53, 1),
+				rgba(248, 8, 51, 1)
+			);
+			background: -moz-linear-gradient(
+				right,
+				rgba(5, 8, 53, 1),
+				rgba(248, 8, 51, 1)
+			);
+			background: linear-gradient(
+				to right,
+				rgba(5, 8, 53, 1),
+				rgba(248, 8, 51, 1)
+			);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+}
+
+@keyframes slide {
+	0% {
+		top: 0;
+	}
+	25% {
+		top: -1.2em;
+	}
+	50% {
+		top: -2.4em;
+	}
+}
