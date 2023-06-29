@@ -1,6 +1,6 @@
 import Button from "../UIElements/Button";
-import logo from "../../assets/logos/logo-light.png";
 
+import logo from "../../assets/logos/logo-light.png";
 import "./Footer.scss";
 
 const Footer = () => {

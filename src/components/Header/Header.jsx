@@ -51,7 +51,7 @@ const Header = () => {
 				</div>
 				<div className="main-header-right__login">
 					<Button>Log in</Button>
-					<p>Become a digital partner</p>
+					<a href="#top">Become a digital partner</a>
 				</div>
 				<div className="main-header-right__translate">
 					<p tabIndex="0">EN</p>

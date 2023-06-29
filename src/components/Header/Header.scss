@@ -52,9 +52,17 @@
 			border-radius: 50px;
 			background-color: #fcf9f7;
 
-			p {
+			a {
 				padding: 10px 19px 10px 20px;
 				font-size: 16px;
+				color: #2d2e33;
+				font-family: "Urbanist Medium";
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+					color: blue;
+				}
 			}
 
 			&:before {

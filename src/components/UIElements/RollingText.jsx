@@ -1,5 +1,3 @@
-// import Button from "./Button";
-
 import "./RollingText.scss";
 
 const RollingText = ({ text1, text2, text3 }) => {

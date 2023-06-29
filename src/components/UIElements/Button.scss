@@ -15,16 +15,12 @@
 	font: inherit;
 	cursor: pointer;
 
-	// &:focus {
-	// 	outline: none;
-	// }
-
 	&:hover,
 	&:active,
 	&:focus {
-		border-color: #050835;
-		background: #fff;
-		color: #050835;
+		border-color: #ebaa3f;
+		background: #ebaa3f;
+		color: #fff;
 	}
 
 	&--inverse {
