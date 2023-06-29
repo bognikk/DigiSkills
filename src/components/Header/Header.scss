@@ -14,6 +14,11 @@
 	font-family: "Urbanist Medium";
 	font-size: 16px;
 
+	&.stickyHeader {
+		padding: 3px 255px;
+		background: #f9b22d;
+	}
+
 	&-right {
 		display: flex;
 		align-items: center;

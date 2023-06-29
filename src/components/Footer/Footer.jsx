@@ -62,7 +62,7 @@ const Footer = () => {
 				</div>
 			</div>
 			<div className="footer__bottom">
-				<div class="copyright">&copy; Digiskillsbelgium 2023.</div>
+				<div className="copyright">&copy; Digiskillsbelgium 2023.</div>
 				<ul>
 					<li>
 						<a href="#top">Terms & Conditions</a>

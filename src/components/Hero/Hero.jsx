@@ -7,7 +7,7 @@ import Button from "../UIElements/Button";
 const Hero = () => {
 	return (
 		<section className="hero">
-			<div class="hero__image"></div>
+			<div className="hero__image"></div>
 			<div className="hero__content">
 				<div className="hero__content--text">
 					<h2>The home of digital skills in Belgium</h2>
@@ -18,12 +18,12 @@ const Hero = () => {
 						<input type="text" placeholder="Search topics" />
 						<select>
 							<option value="hide">
-								<img src={briefcase} alt="briefcase icon" /> Select a project
+								{/* <img src={briefcase} alt="briefcase icon" /> Select a project */}
 							</option>
 							<option data-content={briefcase} value="Project 1">
 								Project 1
 							</option>
-							<option value="fa fa-address-card" class="fa">
+							<option value="fa fa-address-card" className="fa">
 								&#xf2bb;Project 2
 							</option>
 							<option value="Project 3">Project 3</option>

@@ -2,10 +2,28 @@ import Button from "../UIElements/Button";
 
 import logo from "../../assets/logos/logo-dark.png";
 import "./Header.scss";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+	const [stickyClass, setStickyClass] = useState("");
+
+	useEffect(() => {
+		window.addEventListener("scroll", stickyHeader);
+		return () => window.removeEventListener("scroll", stickyHeader);
+	}, []);
+
+	const stickyHeader = () => {
+		if (window !== undefined) {
+			let windowHeight = window.scrollY;
+			let headerHeight = document.querySelector("header").offsetHeight;
+			windowHeight > headerHeight
+				? setStickyClass("stickyHeader")
+				: setStickyClass("");
+		}
+	};
+
 	return (
-		<header className="main-header">
+		<header className={`main-header ${stickyClass}`}>
 			<div className="main-header__left">
 				<a href="#top">
 					<img src={logo} alt="main logo" />
