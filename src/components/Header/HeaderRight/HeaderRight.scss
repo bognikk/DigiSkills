@@ -1,0 +1,157 @@
+@use "../../../styles/typography" as *;
+@use "../../../styles/mixins" as *;
+
+.main-header-right {
+	display: none;
+	flex-wrap: wrap;
+	align-items: center;
+
+	@include desktop {
+		display: flex;
+	}
+
+	&.mobile {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+	}
+
+	&__navigation {
+		.mobile & {
+			width: 100%;
+		}
+
+		ul {
+			display: flex;
+			align-items: center;
+			list-style: none;
+			padding: 0 15px;
+
+			.mobile & {
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				margin-bottom: 30px;
+			}
+
+			li {
+				padding: 15px;
+
+				a {
+					color: #2d2e33;
+					font-size: 16px;
+					font-family: "Urbanist Medium";
+					text-decoration: none;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+
+	&__login {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding: 5px;
+		margin: 0 5px;
+		border-radius: 50px;
+		background-color: #fcf9f7;
+
+		@include large {
+			margin: 0 30px;
+		}
+
+		.mobile & {
+			flex-direction: column;
+			padding: 10px 5px;
+			margin-bottom: 30px;
+			border-radius: 10px;
+			text-align: center;
+		}
+
+		a {
+			padding: 10px 19px 10px 20px;
+			font-size: 16px;
+			color: #2d2e33;
+			font-family: "Urbanist Medium";
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+				color: blue;
+			}
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: -5px;
+			display: block;
+			width: 1px;
+			height: 50px;
+			background-color: #cbccce;
+
+			@include large {
+				left: -30px;
+			}
+
+			.mobile & {
+				display: none;
+			}
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			right: -5px;
+			display: block;
+			width: 1px;
+			height: 50px;
+			background-color: #cbccce;
+
+			@include large {
+				right: -30px;
+			}
+
+			.mobile & {
+				display: none;
+			}
+		}
+
+		button {
+			padding: 8px 30px 9px;
+			font-family: "Urbanist Medium";
+		}
+	}
+
+	&__translate {
+		position: relative;
+		padding: 0 30px;
+		font-family: "Urbanist Medium";
+		cursor: pointer;
+
+		&:focus {
+			outline: 5px auto -webkit-focus-ring-color;
+			outline-offset: -2px;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 45%;
+			right: 8px;
+			display: block;
+			background: url("../../../assets/icons/dropdown.svg") center center
+				no-repeat;
+			width: 8px;
+			height: 5px;
+		}
+	}
+}

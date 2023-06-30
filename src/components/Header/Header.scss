@@ -1,118 +1,88 @@
 @use "../../styles/typography" as *;
+@use "../../styles/mixins" as *;
 
 .main-header {
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 9999;
+	z-index: 999;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap;
 	width: 100%;
-	padding: 25px 255px;
+	padding: 5px;
 	font-family: "Urbanist Medium";
 	font-size: 16px;
+	transition: 0.5s;
 
-	&.stickyHeader {
-		padding: 3px 255px;
-		background: #f9b22d;
+	@include tablet {
+		padding: 25px 30px;
 	}
 
-	&-right {
+	@media (min-width: 1280px) {
+		padding: 25px 10px;
+	}
+
+	@media (min-width: 1400px) {
+		padding: 25px 50px;
+	}
+
+	@media (min-width: 1800px) {
+		padding: 25px 255px;
+	}
+
+	@include large {
+		padding: 25px 255px;
+	}
+
+	&.stickyHeader {
+		padding: 5px;
+		background: #f9b22d;
+		transition: 0.5s;
+
+		@include tablet {
+			padding: 5px 30px;
+		}
+
+		@media (min-width: 1280px) {
+			padding: 5px 10px;
+		}
+
+		@media (min-width: 1400px) {
+			padding: 5px 50px;
+		}
+
+		@media (min-width: 1800px) {
+			padding: 5px 255px;
+		}
+
+		@include large {
+			padding: 5px 255px;
+		}
+	}
+
+	&__menu-btn {
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+		justify-content: space-around;
+		width: 3rem;
+		height: 3rem;
+		margin-right: 2rem;
+		border: none;
+		background: transparent;
+		cursor: pointer;
 
-		&__navigation {
-			ul {
-				display: flex;
-				align-items: center;
-				list-style: none;
-				padding: 0 15px;
-
-				li {
-					padding: 15px;
-
-					a {
-						color: #2d2e33;
-						font-size: 16px;
-						font-family: "Urbanist Medium";
-						text-decoration: none;
-					}
-				}
-			}
+		@include desktop {
+			display: none;
 		}
 
-		&__login {
-			position: relative;
-			display: flex;
-			align-items: center;
-			padding: 5px;
-			margin: 0 30px;
-			border-radius: 50px;
-			background-color: #fcf9f7;
-
-			a {
-				padding: 10px 19px 10px 20px;
-				font-size: 16px;
-				color: #2d2e33;
-				font-family: "Urbanist Medium";
-				text-decoration: none;
-
-				&:hover {
-					text-decoration: underline;
-					color: blue;
-				}
-			}
-
-			&:before {
-				content: "";
-				position: absolute;
-				bottom: 0;
-				left: -30px;
-				display: block;
-				width: 1px;
-				height: 50px;
-				background-color: #cbccce;
-			}
-
-			&:after {
-				content: "";
-				position: absolute;
-				bottom: 0;
-				right: -30px;
-				display: block;
-				width: 1px;
-				height: 50px;
-				background-color: #cbccce;
-			}
-
-			button {
-				padding: 8px 30px 9px;
-			}
-		}
-
-		&__translate {
-			position: relative;
-			padding: 0 30px;
-			cursor: pointer;
-
-			&:focus {
-				outline: 5px auto -webkit-focus-ring-color;
-				outline-offset: -2px;
-			}
-
-			&:after {
-				content: "";
-				position: absolute;
-				top: 45%;
-				right: 8px;
-				display: block;
-				background: url("../../assets/icons/dropdown.svg") center center
-					no-repeat;
-				width: 8px;
-				height: 5px;
-			}
+		span {
+			display: block;
+			width: 3rem;
+			height: 4px;
+			background: #fff;
 		}
 	}
 }

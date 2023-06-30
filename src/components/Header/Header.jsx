@@ -1,4 +1,6 @@
-import Button from "../UIElements/Button";
+import HeaderRight from "./HeaderRight/Headerright";
+import SideDrawer from "./SideDrawer/SideDrawer";
+import Backdrop from "../UIElements/Backdrop";
 
 import logo from "../../assets/logos/logo-dark.png";
 import "./Header.scss";
@@ -6,6 +8,15 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
 	const [stickyClass, setStickyClass] = useState("");
+	const [drawerIsOpen, setDrawerIsOpen] = useState(false);
+
+	const openDrawerHandler = () => {
+		setDrawerIsOpen(true);
+	};
+
+	const closeDrawerHandler = () => {
+		setDrawerIsOpen(false);
+	};
 
 	useEffect(() => {
 		window.addEventListener("scroll", stickyHeader);
@@ -29,34 +40,20 @@ const Header = () => {
 					<img src={logo} alt="main logo" />
 				</a>
 			</div>
+			{drawerIsOpen && <Backdrop onClick={closeDrawerHandler} />}
+			<SideDrawer show={drawerIsOpen} onClick={closeDrawerHandler}>
+				<div className="main-header-right mobile">
+					<HeaderRight />
+				</div>
+			</SideDrawer>
 			<div className="main-header-right">
-				<div className="main-header-right__navigation">
-					<ul>
-						<li>
-							<a href="#top">Training Match</a>
-						</li>
-						<li>
-							<a href="#top">Digital Initiatives</a>
-						</li>
-						<li>
-							<a href="#top">Inspiring Stories</a>
-						</li>
-						<li>
-							<a href="#top">Our Mission</a>
-						</li>
-						<li>
-							<a href="#top">Contact</a>
-						</li>
-					</ul>
-				</div>
-				<div className="main-header-right__login">
-					<Button>Log in</Button>
-					<a href="#top">Become a digital partner</a>
-				</div>
-				<div className="main-header-right__translate">
-					<p tabIndex="0">EN</p>
-				</div>
+				<HeaderRight />
 			</div>
+			<button className="main-header__menu-btn" onClick={openDrawerHandler}>
+				<span />
+				<span />
+				<span />
+			</button>
 		</header>
 	);
 };

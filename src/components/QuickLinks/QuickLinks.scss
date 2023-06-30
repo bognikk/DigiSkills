@@ -1,5 +1,16 @@
+@use "../../styles/typography" as *;
+@use "../../styles/mixins" as *;
+
 .quick-links {
-	padding: 80px 255px 0;
+	padding: 30px;
+
+	@include desktop {
+		padding: 80px 100px 0;
+	}
+
+	@include large {
+		padding: 80px 255px 0;
+	}
 
 	&__title {
 		position: relative;
@@ -27,19 +38,44 @@
 
 	&__content {
 		display: flex;
-		flex-wrap: wrap;
+		flex-direction: column;
 		justify-content: space-between;
 		list-style: none;
+
+		@include tablet {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
 
 		li {
 			width: auto;
 			margin-bottom: 55px;
-			flex: 1 1 25%;
+
+			@include tablet {
+				flex: 1 1 50%;
+			}
+
+			@include desktop {
+				flex: 1 1 33.33%;
+			}
+
+			@media (min-width: 1600px) {
+				flex: 1 1 25%;
+			}
 
 			a {
 				display: flex;
 				align-items: center;
+				justify-content: center;
 				text-decoration: none;
+
+				@include large {
+					justify-content: flex-start;
+				}
+
+				.icon {
+					flex-shrink: 0;
+				}
 
 				&.ql-01 {
 					.icon {
@@ -280,17 +316,19 @@
 						font-size: 20px;
 						font-family: "Urbanist Bold";
 
-						&::after {
-							content: "";
-							display: inline-block;
-							width: 18px;
-							height: 8px;
-							background: url("../../assets/icons/arrow-right.svg") center left
-								no-repeat;
-							background-size: 8px;
-							transform: translate(0%, -40%);
-							opacity: 0;
-							transition: 1s;
+						@include tablet {
+							&::after {
+								content: "";
+								display: inline-block;
+								width: 18px;
+								height: 8px;
+								background: url("../../assets/icons/arrow-right.svg") center
+									left no-repeat;
+								background-size: 8px;
+								transform: translate(0%, -40%);
+								opacity: 0;
+								transition: 1s;
+							}
 						}
 					}
 

@@ -1,38 +1,60 @@
+@use "../../styles/typography" as *;
+@use "../../styles/mixins" as *;
+
 .dropdown {
 	position: relative;
 	display: flex;
 	align-items: center;
-	width: 322px;
-	padding: 0 20px;
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 50px;
+	background-color: #fff;
 
-	&:before {
-		content: "";
-		position: absolute;
-		top: 50%;
-		left: -0;
-		display: block;
-		width: 1px;
-		height: 30px;
-		background-color: rgba(203, 204, 206, 1);
-		transform: translate(-50%, -50%);
+	&.open {
+		border-radius: 20px 20px 0 0;
 	}
 
-	&:after {
-		content: "";
-		position: absolute;
-		top: 50%;
-		right: 0;
-		display: block;
-		width: 1px;
-		height: 30px;
-		background-color: rgba(203, 204, 206, 1);
-		transform: translate(-50%, -50%);
+	@include tablet {
+		width: 217px;
+		padding: 0 20px;
+		margin: 0;
+		background-color: transparent;
+		border-radius: 0;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: -0;
+			display: block;
+			width: 1px;
+			height: 30px;
+			background-color: rgba(203, 204, 206, 1);
+			transform: translate(-50%, -50%);
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 0;
+			display: block;
+			width: 1px;
+			height: 30px;
+			background-color: rgba(203, 204, 206, 1);
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	@include desktop {
+		width: 322px;
 	}
 
 	button.dropdown__header {
 		width: 100%;
 		height: 100%;
-		padding: 0 0 0 35px;
+		padding: 0;
 		margin: 0;
 		border: 0;
 		color: #2d2e33;
@@ -42,18 +64,22 @@
 		text-align: left;
 		cursor: pointer;
 
-		&::before {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 20px;
-			display: block;
-			background: url("../../assets/icons/briefcase-icon.svg") center center
-				no-repeat;
-			width: 25px;
-			height: 20px;
-			transform: translate(0%, -50%);
-			transition: 0.3s;
+		@include tablet {
+			padding: 0 0 0 35px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 20px;
+				display: block;
+				background: url("../../assets/icons/briefcase-icon.svg") center center
+					no-repeat;
+				width: 25px;
+				height: 20px;
+				transform: translate(0%, -50%);
+				transition: 0.3s;
+			}
 		}
 
 		&::after {
@@ -83,7 +109,7 @@
 	&__list-container {
 		position: absolute;
 		left: 0;
-		top: calc(100% + 5px);
+		top: calc(100%);
 		width: 100%;
 		border-radius: 0px 0px 25px 25px;
 	}
@@ -126,20 +152,6 @@
 		}
 	}
 }
-
-// @keyframes spin {
-// 	100% {
-// 		-webkit-transform: rotate(-180deg);
-// 		transform: rotate(-180deg);
-// 	}
-// }
-
-// @keyframes unspin {
-// 	100% {
-// 		-webkit-transform: rotate(360deg);
-// 		transform: rotate(360deg);
-// 	}
-// }
 
 @keyframes rotate {
 	0% {

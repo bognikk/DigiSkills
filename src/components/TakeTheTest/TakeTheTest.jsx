@@ -26,7 +26,8 @@ const TakeTheTest = () => {
 				<Button>Take the test</Button>
 			</div>
 			<div className="take-the-test__video">
-				<video controls="controls">
+				<div className="controls"></div>
+				<video id="videoPlayer" controls="controls">
 					<source src={testVideo} type="video/mp4"></source>
 					Your browser does not support the video tag.
 				</video>

@@ -1,10 +1,24 @@
+@use "../../styles/typography" as *;
+@use "../../styles/mixins" as *;
+
 .take-the-test {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
-	padding: 40px 255px 80px;
+	padding: 80px 30px;
+
+	@include desktop {
+		padding: 80px 100px 80px;
+	}
+
+	@include large {
+		padding: 80px 255px 80px;
+	}
 
 	&__text {
-		width: 45.5%;
+		@include desktop {
+			width: 45.5%;
+		}
 
 		h2 {
 			position: relative;
@@ -37,12 +51,15 @@
 		}
 
 		p {
-			padding-right: 73px;
 			margin-bottom: 30px;
 			color: #8b8b8e;
 			font-size: 16px;
 			font-family: "Urbanist Regular";
 			line-height: 24px;
+
+			@include desktop {
+				padding-right: 73px;
+			}
 		}
 
 		button {
@@ -53,8 +70,18 @@
 	}
 
 	&__video {
-		width: 690px;
-		height: 420px;
+		width: 100%;
+		height: auto;
+		margin-top: 30px;
+
+		@include desktop {
+			width: 50%;
+		}
+
+		@include large {
+			width: 690px;
+			height: 420px;
+		}
 
 		video {
 			width: 100%;

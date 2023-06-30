@@ -8,7 +8,7 @@ const GetInTouch = () => {
 			<div className="get-in-touch__content">
 				<h2>Do you have any questions?</h2>
 				<h4>Ask our team!</h4>
-				<Button inverse>Take the test</Button>
+				<Button inverse>Get in touch</Button>
 			</div>
 		</section>
 	);

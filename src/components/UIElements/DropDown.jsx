@@ -15,7 +15,7 @@ const DropDown = () => {
 	};
 
 	return (
-		<div className="dropdown">
+		<div className={`dropdown ${isOpen ? "open" : ""}`}>
 			<button
 				className={`dropdown__header ${isOpen ? "open" : "closed"}`}
 				onClick={toggling}

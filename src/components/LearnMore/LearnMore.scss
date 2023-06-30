@@ -1,18 +1,39 @@
+@use "../../styles/typography" as *;
+@use "../../styles/mixins" as *;
+
 .learn-more {
-	padding: 80px 255px 40px;
+	padding: 0;
+
+	@include tablet {
+		padding: 30px;
+	}
+
+	@include desktop {
+		padding: 80px 100px 0;
+	}
+
+	@include large {
+		padding: 80px 255px 40px;
+	}
 
 	&__wrapper {
 		position: relative;
-		padding: 113px 121px 111px;
-		border-radius: 15px;
+		padding: 60px 30px 30px 30px;
 		background: url(../../assets/images/learn-more-overlay.png) center center
 				no-repeat,
 			url(../../assets/images/learn-more-bg.png) center center no-repeat;
 		background-size: cover;
+
+		@include tablet {
+			padding: 113px 121px 111px;
+			border-radius: 15px;
+		}
 	}
 
 	&__content {
-		width: 55%;
+		@include desktop {
+			width: 55%;
+		}
 
 		h2 {
 			position: relative;
@@ -37,12 +58,16 @@
 		}
 
 		p {
-			padding-right: 73px;
+			padding-right: 0;
 			margin-bottom: 30px;
 			color: #fff;
 			font-size: 16px;
 			font-family: "Urbanist Regular";
 			line-height: 24px;
+
+			@include tablet {
+				padding-right: 73px;
+			}
 		}
 
 		button {

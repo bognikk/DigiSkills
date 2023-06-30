@@ -1,3 +1,6 @@
+@use "../../styles/typography" as *;
+@use "../../styles/mixins" as *;
+
 .get-in-touch {
 	position: relative;
 	width: 100%;
@@ -10,9 +13,30 @@
 
 	&__content {
 		position: absolute;
+		width: 90%;
 		top: 50%;
-		left: 65%;
-		transform: translate(-65%, -50%);
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		@include tablet {
+			right: auto;
+			left: 60%;
+			width: 75%;
+			text-align: left;
+		}
+
+		@include desktop {
+			width: 50%;
+			top: 50%;
+			left: 65%;
+		}
+
+		@include large {
+			width: auto;
+			top: 50%;
+			left: 65%;
+			transform: translate(-65%, -50%);
+		}
 
 		h2 {
 			position: relative;

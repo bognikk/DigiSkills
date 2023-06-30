@@ -15,7 +15,9 @@ const Hero = () => {
 						The home of digital skills in{" "}
 						<RollingText text1="Belgium" text2="lorem" text3="ipsum" />
 					</h2>
-
+					<h2 className="mobileHeading">
+						The home of digital skills in Belgium
+					</h2>
 					<p>The home of digital skills in Belgium</p>
 				</div>
 				<div className="hero__content--search">
