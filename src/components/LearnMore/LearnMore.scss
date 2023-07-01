@@ -32,6 +32,10 @@
 
 	&__content {
 		@include desktop {
+			width: 75%;
+		}
+
+		@include large {
 			width: 55%;
 		}
 

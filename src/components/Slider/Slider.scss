@@ -1,233 +1,155 @@
-// .slider {
-// 	padding: 80px 255px;
-// 	background-color: #050835;
-
-// 	// .carousel {
-// 	// 	display: flex;
-// 	// }
-
-// 	h2 {
-// 		display: flex;
-// 		justify-content: center;
-// 		align-items: center;
-// 		margin: 0 auto;
-// 		font-family: "Urbanist Bold";
-// 		color: #2d2e33;
-// 		font-size: 30px;
-
-// 		&::before {
-// 			content: "";
-// 			display: inline-block;
-// 			width: 33px;
-// 			height: 32px;
-// 			margin-right: 20px;
-// 			background: url("../../assets/icons/rocket-icon.svg") center center
-// 				no-repeat;
-// 			background-size: 32px;
-// 		}
-// 	}
-
-// 	&__content {
-// 		display: flex;
-// 		margin: 0 -15px;
-// 		list-style: none;
-
-// 		li {
-// 			margin: 0 15px;
-// 			flex: 1 1 25%;
-// 			overflow: hidden;
-
-// 			a {
-// 				text-decoration: none;
-
-// 				&:focus {
-// 					outline: 5px auto -webkit-focus-ring-color;
-// 					outline-offset: -2px;
-// 				}
-
-// 				&:hover {
-// 					.image {
-// 						& > img {
-// 							transform: scale(1.1);
-// 							transition: 0.5s;
-// 						}
-// 					}
-
-// 					.content a::after {
-// 						margin-left: 20px;
-// 					}
-// 				}
-
-// 				&.top-pick-01 .content .badge {
-// 					background: #0c7ee9;
-// 				}
-
-// 				&.top-pick-02 .badge {
-// 					background: #cd61ed;
-// 				}
-
-// 				&.top-pick-03 .badge {
-// 					background: #3100fd;
-// 				}
-
-// 				&.top-pick-04 .badge {
-// 					background: #3100fd;
-// 				}
-
-// 				.image {
-// 					width: 100%;
-// 					max-height: 304px;
-// 					overflow: hidden;
-// 					border-radius: 15px 15px 0px 0px;
-
-// 					& > img {
-// 						width: 100%;
-// 						height: 100%;
-// 						border-radius: 15px;
-// 						transition: 0.5s;
-// 					}
-// 				}
-
-// 				.content {
-// 					position: relative;
-// 					padding: 30px 15px 15px;
-
-// 					.badge {
-// 						position: absolute;
-// 						display: flex;
-// 						width: 84px;
-// 						height: 30px;
-// 						top: -15px;
-// 						padding: 7px 10px 5px;
-// 						border-radius: 5px;
-// 						z-index: 888;
-
-// 						&__text {
-// 							margin: 0 0 0 5px;
-// 							color: #fff;
-// 							font-size: 14px;
-// 							font-family: "Urbanist SemiBold";
-// 						}
-// 					}
-
-// 					h4 {
-// 						margin-bottom: 5px;
-// 						color: #2d2e33;
-// 						font-size: 20px;
-// 						font-family: "Urbanist Bold";
-// 					}
-
-// 					.description {
-// 						margin-bottom: 24px;
-// 						color: #8b8b8e;
-// 						font-size: 16px;
-// 						font-family: "Urbanist Regular";
-// 						font-style: italic;
-// 					}
-
-// 					a {
-// 						position: relative;
-// 						color: #050835;
-// 						font-size: 16px;
-// 						font-family: "Urbanist SemiBold";
-
-// 						&::after {
-// 							content: "";
-// 							display: inline-block;
-// 							width: 18px;
-// 							height: 8px;
-// 							margin-left: 10px;
-// 							background: url("../../assets/icons/arrow-right.svg") center left
-// 								no-repeat;
-// 							background-size: 8px;
-// 							transition: 0.5s;
-// 						}
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-// }
+@use "../../styles/typography" as *;
+@use "../../styles/mixins" as *;
 
 .slider {
-	padding: 80px 255px;
+	padding: 30px 30px 100px;
 	background-color: #050835;
 
-	// .carousel {
-	// 	display: flex;
-	// }
+	@include desktop {
+		padding: 80px 0 167px 0;
+	}
+
+	.flickity-slider {
+		@include desktop {
+			margin-left: 255px !important;
+		}
+	}
+
+	.flickity-viewport {
+		overflow: hidden;
+	}
 
 	h2 {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin: 0 auto 30px;
+		margin: 0 0 30px;
 		font-family: "Urbanist Bold";
-		color: #2d2e33;
-		font-size: 30px;
+		color: #fff;
+		font-size: 40px;
 
 		&::before {
 			content: "";
 			display: inline-block;
-			width: 33px;
+			width: 100px;
 			height: 32px;
 			margin-right: 20px;
 			background: url("../../assets/icons/rocket-icon.svg") center center
 				no-repeat;
 			background-size: 32px;
+
+			@include tablet {
+				width: 33px;
+				height: 32px;
+			}
 		}
 	}
 
-	.carousel {
+	.carousel-cell {
+		display: inline-block;
 		width: 100%;
-		display: flex;
+		margin: 0 15px;
+		overflow: hidden;
+		cursor: pointer;
 
-		&-cell {
-			flex: 1 1 25%;
-			display: inline-block;
-			// overflow: hidden;
-			counter-increment: gallery-cell;
-
-			.image {
-				width: 100%;
-				height: 425px;
-				overflow: hidden;
-				border-radius: 15px 15px 0px 0px;
-
-				& > img {
-					width: 100%;
-					height: 100%;
-					border-radius: 15px;
-					transition: 0.5s;
-				}
-			}
-
-			.content {
-				position: relative;
-				padding: 30px 15px 15px;
-
-				p {
-				}
-
-				a {
-					position: relative;
-					color: #050835;
-					font-size: 16px;
-					font-family: "Urbanist SemiBold";
-
-					&::after {
-						content: "";
-						display: inline-block;
-						width: 18px;
-						height: 8px;
-						margin-left: 10px;
-						background: url("../../assets/icons/arrow-right.svg") center left
-							no-repeat;
-						background-size: 8px;
+		@include desktop {
+			width: 450px;
+			height: 500px;
+			&:hover {
+				.image {
+					overflow: hidden;
+					& > img {
+						transform: scale(1.1);
 						transition: 0.5s;
 					}
 				}
+
+				.content a::after {
+					margin-left: 20px;
+				}
 			}
+		}
+
+		.image {
+			width: 100%;
+			max-height: 425px;
+			overflow: hidden;
+			border-radius: 15px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 15px;
+			transition: 0.5s;
+		}
+
+		.content {
+			position: relative;
+			padding-top: 20px;
+
+			p {
+				padding: 0;
+				margin-bottom: 10px;
+				color: #fff;
+				font-size: 20px;
+				font-family: "Urbanist Bold";
+			}
+
+			a {
+				position: relative;
+				font-size: 16px;
+				font-family: "Urbanist Medium";
+				color: #fff;
+				text-decoration: none;
+
+				&::after {
+					content: "";
+					display: inline-block;
+					width: 18px;
+					height: 8px;
+					margin-left: 10px;
+					background: url("../../assets/icons/arrow-right-light.svg") center
+						left no-repeat;
+					background-size: 8px;
+					transition: 0.5s;
+				}
+			}
+		}
+	}
+
+	.flickity-page-dots {
+		bottom: -40px;
+
+		@include tablet {
+			bottom: -81px;
+		}
+	}
+
+	.flickity-page-dot {
+		width: 7px;
+		height: 7px;
+		opacity: 1;
+		background: #fff;
+		border: 2px solid #fff;
+
+		&:active,
+		&:focus,
+		&:focus-visible {
+			box-shadow: 0 0 0 5px transparent;
+		}
+
+		&:focus {
+			outline: 5px auto -webkit-focus-ring-color;
+			outline-offset: 2px;
+		}
+
+		&.is-selected {
+			width: 22px;
+			height: 7px;
+			border: 2px solid #fff;
+			border-radius: 5px;
 		}
 	}
 }

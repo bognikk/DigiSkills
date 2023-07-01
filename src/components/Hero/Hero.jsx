@@ -2,7 +2,6 @@ import Button from "../UIElements/Button";
 import DropDown from "../UIElements/DropDown";
 
 import RollingText from "../UIElements/RollingText";
-// import briefcase from "../../assets/icons/briefcase-icon.svg";
 import "./Hero.scss";
 
 const Hero = () => {
